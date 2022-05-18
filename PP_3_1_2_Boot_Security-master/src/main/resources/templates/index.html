@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+
+<p th:text="${user}"></p>
+
+<form th:if="${user != 'anonymous'}" th:action="@{/logout}" method="post">
+    <input type="submit" value="logout">logoaout</input>
+</form>
+<h2>Index Page</h2>
+<a th:href="@{/login}">Login Page</a><br>
+<a th:href="@{/registration}">Registration</a><br>
+<a th:href="@{/foruser}">Foruser</a><br>
+<a th:href="@{/foradmin}">Foradmin</a><br>
+
+</body>
+</html>

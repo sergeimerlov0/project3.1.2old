@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Редактирование</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+<body>
+
+
+<div>
+    <h1>Редактирование статьи.</h1>
+    <div th:each="el : ${user}">
+        <form method="post">
+            <input type="text" th:value="${el.username}" name="username" placeholder="Введите имя " ><br>
+            <input type="text" th:value="${el.password}" name="password" placeholder="Введите имя " ><br>
+            <input type="text" th:value="${el.email}" name="email" placeholder="Введите фамилию "><br>
+            <input type="text" th:value="${el.phone}" name="phone" placeholder="Введите возраст "><br>
+            <button type="submit">Обновить</button>
+        </form>
+    </div>
+</div>
+<!--<form th:action="${user}" method="post">-->
+<!--    username: <input type="text" th:value="${username}" name="username">-->
+<!--    password: <input type="text" th:value="${password}" name="password">-->
+<!--    email: <input type="text" th:value="${email}" name="email">-->
+<!--    phone: <input type="text" th:value="${phone}" name="phone">-->
+<!--    <input type="submit" name="registration">-->
+<!--</form>-->
+
+</body>
+</html>
